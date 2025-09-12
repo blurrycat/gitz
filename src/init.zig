@@ -1,5 +1,5 @@
 const std = @import("std");
-const raw = @import("raw.zig");
+const raw = @import("raw");
 
 var git2_init = std.once(libgit2_init);
 

@@ -2,7 +2,7 @@ const std = @import("std");
 
 const err = @import("error.zig");
 const init = @import("init.zig");
-const raw = @import("raw.zig");
+const raw = @import("raw");
 
 const Branch = @import("branch.zig");
 const Oid = @import("oid.zig");

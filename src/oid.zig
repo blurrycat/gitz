@@ -1,4 +1,4 @@
-const raw = @import("raw.zig");
+const raw = @import("raw");
 
 const Oid = @This();
 

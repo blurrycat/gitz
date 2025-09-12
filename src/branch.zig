@@ -1,4 +1,4 @@
-const raw = @import("raw.zig");
+const raw = @import("raw");
 const err = @import("error.zig");
 
 const Reference = @import("reference.zig");

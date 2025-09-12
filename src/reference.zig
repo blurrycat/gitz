@@ -1,6 +1,6 @@
 const std = @import("std");
 
-const raw = @import("raw.zig");
+const raw = @import("raw");
 const Oid = @import("oid.zig");
 
 const Reference = @This();

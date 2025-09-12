@@ -33,6 +33,18 @@ pub fn build(b: *std.Build) !void {
 
     b.installArtifact(lib);
 
+    const libgit2_c = libgit2_dep.builder.dependency("libgit2", .{});
+    const git2_c_root_source_file = libgit2_c.path("include/git2.h");
+    const git2_c_includes = libgit2_c.path("include");
+    const git2_c = b.addTranslateC(.{
+        .root_source_file = git2_c_root_source_file,
+        .link_libc = true,
+        .optimize = optimize,
+        .target = target,
+    });
+    git2_c.addIncludePath(git2_c_includes);
+    lib_mod.addImport("raw", git2_c.createModule());
+
     const exe_mod = b.createModule(.{
         .root_source_file = b.path("src/main.zig"),
         .target = target,

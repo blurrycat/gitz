@@ -1,6 +1,6 @@
 const std = @import("std");
 const init = @import("init.zig");
-const raw = @import("raw.zig");
+const raw = @import("raw");
 const logger = @import("logger.zig");
 
 pub const ErrorCode = enum(i8) {
